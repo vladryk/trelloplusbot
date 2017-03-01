@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.conf.urls import include, url
 from django.conf.urls.static import static
 from django.contrib import admin
@@ -8,13 +9,12 @@ from django.template.response import TemplateResponse
 from bot import views as bot_views
 from bot.models import Token
 from .admin import init_admin
-from django.conf import settings
 
 init_admin()
 
 
 def home(request):
-    if DEBUG:
+    if settings.DEBUG:
         return HttpResponseRedirect(reverse('admin:index'))
     html = '<html><body>{}</body></html>'.format('Trello Plus bot')
     return HttpResponse(html)
