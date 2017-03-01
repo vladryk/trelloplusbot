@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django_cron',
     'bot',
 ]
+MIDDLEWARE_CLASSES = []
 try:
     # noinspection PyUnresolvedReferences
     import django_extensions
@@ -56,6 +57,7 @@ try:
     import debug_toolbar
 
     INSTALLED_APPS.append('debug_toolbar')
+    MIDDLEWARE_CLASSES.append('debug_toolbar.middleware.DebugToolbarMiddleware')
 except ImportError:
     pass
 
@@ -66,8 +68,7 @@ BOT_HANDLERS_MODULES = [
     'bot.handlers.other',
 ]
 
-MIDDLEWARE_CLASSES = (
-    'debug_toolbar.middleware.DebugToolbarMiddleware',
+MIDDLEWARE_CLASSES.extend([
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -76,7 +77,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
-)
+])
 # DEBUG_TOOLBAR_PATCH_SETTINGS = False
 
 CRON_CLASSES = [
