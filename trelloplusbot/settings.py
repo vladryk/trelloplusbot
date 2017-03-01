@@ -84,7 +84,7 @@ CRON_CLASSES = [
 ]
 DJANGO_CRON_DELETE_LOGS_OLDER_THAN = 31
 
-ROOT_URLCONF = 'trelloplus.urls'
+ROOT_URLCONF = 'trelloplusbot.urls'
 
 TEMPLATES = [
     {
@@ -205,7 +205,7 @@ LOGGING = {
     },
 }
 
-WSGI_APPLICATION = 'trelloplus.wsgi.application'
+WSGI_APPLICATION = 'trelloplusbot.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
@@ -213,7 +213,7 @@ WSGI_APPLICATION = 'trelloplus.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'trelloplus',
+        'NAME': 'trelloplusbot',
         'USER': 'root',
         'PASSWORD': '',
         'OPTIONS': {
@@ -291,7 +291,7 @@ UNDER_CONSTRUCTION = False
 TRELLO_API_KEY = ''
 TRELLO_SECRET_KEY = ''
 
-from trelloplus.local_settings import *
+from trelloplusbot.local_settings import *
 
 logger = logging.getLogger()
 logger.setLevel(logging.DEBUG if DEBUG else logging.ERROR)

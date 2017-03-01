@@ -4,7 +4,7 @@ syntax: glob
 /.idea/
 .*rc
 ENV/
-trelloplus/local_settings.py
+trelloplusbot/local_settings.py
 logs/*
 media/data/*
 update.sh
