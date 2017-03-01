@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Authorization</title>
+    <script>
+        hash = location.hash;
+        token = '';
+        if (hash.search('#token=') !== false) {
+            token = hash.substring(7);
+            href = location.href;
+            href = href.replace(hash, '?token=' + token);
+            location.replace(href);
+        } else {
+            location.replace('{{ url }}?start=token_page')
+        }
+    </script>
+</head>
+<body>
+<h1>Wait a second...</h1>
+</body>
+</html>

@@ -1,0 +1,33 @@
+OK = '✅'
+GREEN_X = '❎'
+CANCEL = '❌'
+SKIP = '⏭'
+BACK = '🔙'
+DELETE = '🗑'
+NEXT = '⏩'
+SEARCH = '🔍'
+WAITING = '⏳'
+
+LINE = '—' * 30
+ITEM = '▪️'
+
+WARNING = '⚠️'
+GREY_QUESTION = '❔'
+RED_QUESTION = '❓'
+UP = '👆'
+DOWN = '👇'
+GREY_EXCLAMATION = '❕'
+RED_EXCLAMATION = '❗️'
+PAPERCLIP = '📎'
+SELECTED = '☑️'
+UNSELECTED = '🔘'
+
+PHONE = '📞'
+LOCATION = '📍'
+HELP = '🆘'
+
+BOARDS = '📚'
+START = '▶️'
+STOP = '⏹'
+RESET = '🔄'
+TIMER = '⏱'

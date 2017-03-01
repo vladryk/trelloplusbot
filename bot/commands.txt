@@ -1,0 +1,4 @@
+start - Start bot
+help - Get help
+settings - Change settings
+boards - Get list of my boards

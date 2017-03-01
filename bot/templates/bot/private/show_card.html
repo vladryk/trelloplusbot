@@ -1,0 +1,8 @@
+<br/> <b>{{ card|get_item:'name' }}</b>
+{% if card|get_item:'desc' %}
+    <br/> {{ card|get_item:'desc' }}
+{% endif %}
+{% if card|get_item:'due' %}
+    <br/> {{ card|get_item:'due' }}
+{% endif %}
+<br/> {{ card|get_item:'shortUrl' }}
