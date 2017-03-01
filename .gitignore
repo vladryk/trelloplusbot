@@ -1,8 +1,8 @@
 /static/*
 *.pyc
+.*rc
 /.idea/
 ENV*/
 trelloplusbot/local_settings.py
 /logs/*.log
-update.sh
-runserver.sh
+*.sh
