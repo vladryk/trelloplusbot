@@ -1,11 +1,8 @@
-syntax: glob
 /static/*
 *.pyc
 /.idea/
-.*rc
-ENV/
+ENV*/
 trelloplusbot/local_settings.py
-logs/*
-media/data/*
+/logs/*.log
 update.sh
 runserver.sh
