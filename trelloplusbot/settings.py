@@ -195,7 +195,7 @@ LOGGING = {
             'include_html': True,
         },
         'django.security.DisallowedHost': {
-            'handlers': ['null', 'file'],
+            'handlers': ['null'],
             'propagate': False,
         },
         'django.db.backends': {
