@@ -183,9 +183,9 @@ class PrivateHandler(bot_utils.BaseHandler):
     @tgbot.message_handler(TgUser.is_private, regexp=keyboards.Help.emoji_to_regexp())
     @tgbot.message_handler(TgUser.is_private, commands=keyboards.Help.commands() + ['sos'])
     def help(tguser: TgUser):
-        tguser.render_to_string('bot/private/help.html', keyboard=tguser.keyboards.Start)
+        tguser.render_to_string('bot/private/help.html', keyboard=keyboards.Start)
 
     @staticmethod
     @tgbot.message_handler(TgUser.is_private, commands=['settings'])
     def settings(tguser: TgUser):
-        tguser.send_message('Настроек пока нет', keyboard=tguser.keyboards.Start)
+        tguser.send_message('Настроек пока нет', keyboard=keyboards.Start)
